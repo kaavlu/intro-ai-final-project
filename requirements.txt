@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+rapidfuzz
+torch
+torchvision
+pillow
+matplotlib
+seaborn
+tqdm
+jupyter
+ipykernel

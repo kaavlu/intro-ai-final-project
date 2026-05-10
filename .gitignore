@@ -1,0 +1,81 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Packaging / tooling ---
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Environment & secrets (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# --- IDE / OS ---
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- ML runs & checkpoints (regenerate with train.py) ---
+outputs/
+wandb/
+lightning_logs/
+mlruns/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# --- Large / downloaded datasets (regenerate after clone) ---
+# FoodNExTDB + Food-101 images and nutrition CSVs are large; keep empty dirs via .gitkeep.
+data/raw/FoodNExTDB/
+data/raw/food41/
+data/raw/nutrition/**
+!data/raw/nutrition/.gitkeep
+
+# --- Processed tables & splits (regenerate with data_loading / nutrition_mapping) ---
+data/processed/*.csv
+data/processed/*.json
+data/processed/splits/
+
+# --- Common large archives (if downloaded into repo) ---
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.rar
+
+# --- Torch / Hugging Face caches if created inside project ---
+.cache/
+torch_hub/
